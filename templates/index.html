@@ -5,6 +5,14 @@
 </head>
 <body>
     <h1>The Amazing Roman Numerals Converter</h1>
-    <p>roman: {{roman}}, arabic: {{arabic}}</p>
+    {% if roman != "None" %}
+        <p>You typed Roman numeral: {{roman}}. In normal numbers, that's: {{arabic}}</p>
+    {% endif %}
+    <p>Enter a Roman numeral, and we'll convert it to a normal number for you. Yay!</p>
+    <form>
+        <label for="roman">Roman number:</label>
+        <input type="text" id="roman" name="roman"><br>
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
