@@ -12,13 +12,13 @@ SINGLE_DIGIT_ROMANS: Dict[str, int] = {
 }
 
 
-def is_valid(roman):
+def is_valid(roman: str) -> bool:
     return len(roman) > 0 and re.match(r"^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$", roman) is not None
 
 
 class Roman:
     @classmethod
-    def convert(cls, roman) -> int:
+    def convert(cls, roman: str) -> int:
         if is_valid(roman):
             if len(roman) == 1:
                 return SINGLE_DIGIT_ROMANS[roman]
