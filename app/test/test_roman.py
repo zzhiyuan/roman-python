@@ -43,6 +43,3 @@ class RomanTest(unittest.TestCase):
         self.assertEqual(-1, Roman.convert("G"))
         self.assertEqual(-1, Roman.convert("H"))
         self.assertEqual(-1, Roman.convert(""))
-
-    def test_halloween_easter_egg(self):
-        self.assertEqual(13, Roman.convert("boo"));
