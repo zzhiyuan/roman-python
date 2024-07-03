@@ -46,3 +46,8 @@ class RomanTest(unittest.TestCase):
 
     def test_answer_the_ultimate_question(self):
         self.assertEqual(42, Roman.convert("What is the answer to the ultimate question?"))
+
+    def test_add_romans_testbad(self):
+        self.assertEqual(2, Roman.convert("II"))
+        self.assertEqual(99, Roman.convert("III"))
+        self.assertEqual(3888, Roman.convert("MMMDCCCLXXXVIII"))
